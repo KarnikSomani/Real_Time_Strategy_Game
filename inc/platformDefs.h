@@ -1,3 +1,7 @@
+/**
+ * @file platformDefs.h
+ * @brief defines common platform definitions.
+ */
 #pragma once
 
 typedef enum{

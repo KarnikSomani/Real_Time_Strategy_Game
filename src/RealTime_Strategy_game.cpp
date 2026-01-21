@@ -1,10 +1,7 @@
-//============================================================================
-// Name        : RealTime_Strategy_game.cpp
-// Author      : Karnik Somani
-// Version     : 1.0
-// Copyright   : Your copyright notice
-//============================================================================
-
+/**
+ * @file RealTime_Strategy_game.cpp
+ * @brief Defines api to build objects and run the application
+ */
 #include <iostream>
 #include "commonIncludes.h"
 #include "battlefieldMap.h"

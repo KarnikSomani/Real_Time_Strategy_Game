@@ -28,8 +28,21 @@ To get started with using the application, user needs to
 
 ### Software Detailed Design
 #### Components
-TBD
-#### Design Choices
-TBD
+class - battlefieldMap
+class - battlefieldPathFinder
+Library - nlohmann / json
+#### API Documentaion
+- Doxygen format has used for commenting in the codebase.
+- User may follow following steps to generate doxygen based api documentaion .
+#### Design
+For finding the path from start to target position, breath first search algorithm has been employed along and to overcome its drawbacks greedy best first search algorithm has also been used.
+
+From the start terrain, for every terrain at the top of a searchQueue, there are neighbouring terrains looked for and if it has never been found before, it is added to back of the searchQueue, and the cycle repeats.
+This way all the neighbours on the same level are visited first.
+
+Searching terrains this way has a drawback that we are searching terrains in all the direction, which consumes more iterations. So we always keep the searchQueue sorted such a way that we iterate through those terrains first which are closest to both starting index and target index. For calculating distance between two points on graph, we use the formula |x2-x1| + |y2-y1|.
+
+When a new neighbour is found on the grid, its index is updated with the parent terrain index in a vector called visitedTerrains. This would help to trace back the route from target terrain back to start terrain.
+
 ## License
 TBD

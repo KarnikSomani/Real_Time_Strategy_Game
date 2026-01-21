@@ -1,3 +1,7 @@
+/**
+ * @file battlefieldMap.cpp
+ * @brief Definitions to parse Terrain map to and from json file.
+ */
 #include "commonIncludes.h"
 #include "battlefieldMap.h"
 #include <iostream>
@@ -15,6 +19,7 @@ eRetStatus battelefieldMap::battlefieldMapInit(void)
 		cout << "cwd: " << string(currentDir) << endl;
 	}
 
+	// form 
 	string mapPath = string(currentDir) + string("\\..\\") + string(BATTLEFIELD_MAP_LOCATION);
 	ifstream battlefieldMapDataStream(mapPath.c_str());
     battlefieldMapDataJson = json::parse(battlefieldMapDataStream);
@@ -58,7 +63,7 @@ eRetStatus battelefieldMap::battlefieldMapInit(void)
 		{
 			// for static analysis check
 		}
-	}	
+	}
 
     return RET_STATUS_OK;
 }
@@ -71,7 +76,7 @@ void battelefieldMap::getMapPosIdxToXY(uint32_t posIdx, uint32_t &posX, uint32_t
 	return;
 }
 
-void battelefieldMap::getMapPosXYToIdx(uint32_t &posIdx, uint32_t &posX, uint32_t &posY)
+void battelefieldMap::getMapPosXYToIdx(uint32_t &posIdx, uint32_t posX, uint32_t posY)
 {
 	posIdx = (posY * battlefieldLenXAxis) + posX;
 	return;

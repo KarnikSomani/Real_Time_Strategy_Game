@@ -1,3 +1,7 @@
+/**
+ * @file battlefieldPathFinder.cpp
+ * @brief Declares class and member to execute path finding algorithm
+ */
 #include "commonIncludes.h"
 #include "battlefieldMap.h"
 #include "battlefieldPathFinder.h"

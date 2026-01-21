@@ -1,3 +1,7 @@
+/**
+ * @file commonIncludes.h
+ * @brief Common header files needed across the project
+ */
 #pragma once
 
 #include <iostream>

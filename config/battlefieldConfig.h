@@ -1,3 +1,7 @@
+/**
+ * @file battlefieldConfig.h
+ * @brief Defines battlefield map configurations
+ */
 #pragma once
 
 #define BATTLEFIELD_MAP_LOCATION    ".\\config\\battlefieldMap.json"
